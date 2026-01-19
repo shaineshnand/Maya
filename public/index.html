@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maya - Supportive Anime Companion</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="profile">
+        <div class="avatar" aria-hidden="true"></div>
+        <div class="profile-text">
+          <h1>Maya</h1>
+          <p>Your supportive, anime-inspired companion</p>
+        </div>
+        <div class="toggles">
+          <label class="toggle">
+            <input type="checkbox" id="autoSpeak" checked />
+            <span>Auto speak replies</span>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="gentleCheckins" checked />
+            <span>Gentle check-ins</span>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="voiceInput" checked />
+            <span>Voice input</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="chat">
+        <div id="chatLog" class="chat-log" aria-live="polite"></div>
+        <form id="chatForm" class="chat-form">
+          <textarea
+            id="userInput"
+            name="userInput"
+            rows="2"
+            placeholder="Tell Maya how you feel..."
+            required
+          ></textarea>
+          <div class="actions">
+            <button type="button" id="micButton" class="secondary">
+              Hold to talk
+            </button>
+            <button type="submit">Send</button>
+          </div>
+        </form>
+        <p class="hint">
+          Tip: press and hold “Hold to talk” to speak instead of typing (if your
+          browser supports voice input).
+        </p>
+        <div class="status" id="statusText">Maya is ready to listen.</div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
